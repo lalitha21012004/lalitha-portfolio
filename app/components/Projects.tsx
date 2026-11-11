@@ -72,7 +72,7 @@ const projectsData: Project[] = [
   }
 ];
 
-export const Projects: React.FC = () => {
+const Projects: React.FC = () => {
   return (
     <section className="py-12 bg-slate-50 dark:bg-slate-900" id="projects">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

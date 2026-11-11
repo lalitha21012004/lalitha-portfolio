@@ -1,6 +1,45 @@
 export default function Projects() {
   const projects = [
     {
+      title: "MedExtract AI",
+      status: "Production-Grade",
+      description:
+        "A full-stack health application engineered to process medical reports and provide clinical summaries and interactive patient Q&A.",
+      architecture: [
+        "Django backend with Vite-driven React frontend",
+        "Hosted on Vercel with Render backend deployment",
+        "GroqCloud and Gemini API integration for AI inferencing",
+        "Secure JWT authentication and OCR report extraction pipelines",
+        "Structured parameter risk-level evaluations with dynamic metric tables",
+      ],
+      tech: [
+        "Python",
+        "Django",
+        "React",
+        "Vite",
+        "Gemini API",
+        "GroqCloud",
+        "JWT",
+      ],
+    },
+    {
+      title: "TN Agribot",
+      status: "Active System",
+      description:
+        "An interactive, multilingual agricultural chatbot designed to process and resolve queries for farming communities.",
+      architecture: [
+        "Python and Flask backend infrastructure",
+        "Relational database schemas designed in MySQL",
+        "Multilingual chat data processing and retrieval",
+      ],
+      tech: [
+        "Python",
+        "Flask",
+        "MySQL",
+        "REST APIs",
+      ],
+    },
+    {
       title: "E-Commerce Platform with Stripe Integration",
       status: "Actively Improving",
       description:
@@ -50,11 +89,11 @@ export default function Projects() {
         {/* Section Title */}
         <div className="text-center mb-20">
           <h2 className="text-4xl font-bold mb-4">
-            Backend Engineering Projects
+            Backend & Full-Stack Engineering Projects
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
             Focused on scalable architectures, secure authentication mechanisms,
-            and reliable payment workflows.
+            AI integrations, and reliable payment workflows.
           </p>
         </div>
 
@@ -112,3 +151,5 @@ export default function Projects() {
     </section>
   );
 }
+
+```

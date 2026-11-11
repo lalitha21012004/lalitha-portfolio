@@ -1,155 +1,154 @@
-export default function Projects() {
-  const projects = [
-    {
-      title: "MedExtract AI",
-      status: "Production-Grade",
-      description:
-        "A full-stack health application engineered to process medical reports and provide clinical summaries and interactive patient Q&A.",
-      architecture: [
-        "Django backend with Vite-driven React frontend",
-        "Hosted on Vercel with Render backend deployment",
-        "GroqCloud and Gemini API integration for AI inferencing",
-        "Secure JWT authentication and OCR report extraction pipelines",
-        "Structured parameter risk-level evaluations with dynamic metric tables",
-      ],
-      tech: [
-        "Python",
-        "Django",
-        "React",
-        "Vite",
-        "Gemini API",
-        "GroqCloud",
-        "JWT",
-      ],
-    },
-    {
-      title: "TN Agribot",
-      status: "Active System",
-      description:
-        "An interactive, multilingual agricultural chatbot designed to process and resolve queries for farming communities.",
-      architecture: [
-        "Python and Flask backend infrastructure",
-        "Relational database schemas designed in MySQL",
-        "Multilingual chat data processing and retrieval",
-      ],
-      tech: [
-        "Python",
-        "Flask",
-        "MySQL",
-        "REST APIs",
-      ],
-    },
-    {
-      title: "E-Commerce Platform with Stripe Integration",
-      status: "Actively Improving",
-      description:
-        "A secure full-stack commerce application focused on backend robustness, authentication, and payment reliability.",
-      architecture: [
-        "Layered architecture (Controller → Service → Repository)",
-        "JWT-based authentication with Spring Security",
-        "Stripe Payment Intent API integration",
-        "Relational schema with normalized tables",
-        "Global exception handling & standardized API responses",
-      ],
-      tech: [
-        "Java",
-        "Spring Boot",
-        "React",
-        "MySQL",
-        "JWT",
-        "Stripe API",
-      ],
-    },
-    {
-      title: "Microservices-Based Order Management System",
-      status: "Design & Scaling Phase",
-      description:
-        "A distributed backend system designed to explore service isolation, inter-service communication, and failure management strategies.",
-      architecture: [
-        "Choreography-based event-driven design",
-        "Service-to-service REST communication",
-        "Retry & failure management handling",
-        "API Gateway routing strategy",
-        "Docker-based containerization",
-      ],
-      tech: [
-        "Spring Boot",
-        "Spring Cloud",
-        "REST APIs",
-        "MySQL",
-        "Docker",
-      ],
-    },
-  ];
+import React from 'react';
 
+interface Project {
+  title: string;
+  subtitle: string;
+  description: string;
+  skills: string[];
+  architecture: string;
+  githubUrl?: string;
+  liveUrl?: string;
+}
+
+const projectsData: Project[] = [
+  {
+    title: "MedExtract AI",
+    subtitle: "Full Stack Medical Report Analysis Application",
+    description:
+      "Engineered a production-grade health platform that automates OCR text extraction from medical reports, evaluates parameter risk levels, and generates clinical summaries with interactive Q&A.",
+    architecture:
+      "Django REST backend, Vite-driven React.js frontend, deployed on Vercel (Frontend) and Render (Backend). Integrated GroqCloud (openai/gpt-oss-120b) and Gemini APIs with secure JWT authentication.",
+    skills: [
+      "Python",
+      "Django",
+      "Django REST Framework",
+      "React.js",
+      "Vite",
+      "PostgreSQL",
+      "GroqCloud API",
+      "Gemini API",
+      "JWT Auth",
+      "Vercel",
+      "Render",
+      "REST APIs"
+    ],
+    githubUrl: "https://github.com/lalitha21012004",
+    liveUrl: "https://github.com/lalitha21012004/medextract-ai"
+  },
+  {
+    title: "TN Agribot",
+    subtitle: "Multilingual Agricultural Chatbot",
+    description:
+      "Developed a backend pipeline and interactive chatbot system tailored for farming communities to deliver context-aware, multilingual query resolutions.",
+    architecture:
+      "Python & Flask micro-backend architecture connected to a structured relational schema in MySQL for high-accuracy query storage and retrieval.",
+    skills: [
+      "Python",
+      "Flask",
+      "MySQL",
+      "REST APIs",
+      "Relational DB Design",
+      "Backend Pipelines"
+    ],
+    githubUrl: "https://github.com/lalitha21012004",
+    liveUrl: "https://github.com/lalitha21012004/AgriBot-TN"
+  },
+  {
+    title: "CI/CD Pipeline Adapters & Automation",
+    subtitle: "Enterprise DevOps & Integration Workflows (Ticking Minds)",
+    description:
+      "Architected scalable backend components and deployment pipeline adapters to automate build, testing, and deployment synchronization across distributed services.",
+    architecture:
+      "Multi-platform CI/CD integration interfacing Azure DevOps, Jenkins, and GitLab pipelines with verifications for database-driven configurations.",
+    skills: [
+      "Azure DevOps",
+      "Jenkins",
+      "GitLab CI/CD",
+      "Docker",
+      "Git",
+      "Backend Architecture",
+      "System Verification"
+    ]
+  }
+];
+
+export const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-28 px-6 bg-slate-900">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-12 bg-slate-50 dark:bg-slate-900" id="projects">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
+          Featured Projects
+        </h2>
+        <p className="text-slate-600 dark:text-slate-400 mb-8">
+          Production-grade applications, full-stack architectures, and automated pipelines.
+        </p>
 
-        {/* Section Title */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl font-bold mb-4">
-            Backend & Full-Stack Engineering Projects
-          </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
-            Focused on scalable architectures, secure authentication mechanisms,
-            AI integrations, and reliable payment workflows.
-          </p>
-        </div>
-
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-12">
-          {projects.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {projectsData.map((project, index) => (
             <div
               key={index}
-              className="bg-slate-800/60 backdrop-blur-lg border border-slate-700 rounded-2xl p-10 hover:border-blue-500 transition duration-300 shadow-xl"
+              className="flex flex-col bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 p-6 transition-all hover:shadow-md"
             >
-              {/* Title */}
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="text-2xl font-semibold">
+              <div className="mb-4">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                   {project.title}
                 </h3>
-                <span className="text-xs px-3 py-1 bg-slate-700 rounded-full text-slate-300">
-                  {project.status}
+                <span className="text-sm font-medium text-indigo-600 dark:text-indigo-400">
+                  {project.subtitle}
                 </span>
               </div>
 
-              {/* Description */}
-              <p className="text-slate-300 mb-8 leading-relaxed">
+              <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">
                 {project.description}
               </p>
 
-              {/* Architecture Focus */}
-              <div className="mb-8">
-                <h4 className="text-sm uppercase tracking-wider text-slate-400 mb-4">
-                  Architecture Highlights
-                </h4>
-                <ul className="space-y-2 text-slate-400">
-                  {project.architecture.map((item) => (
-                    <li key={item}>• {item}</li>
+              <div className="text-xs text-slate-500 dark:text-slate-400 mb-4 bg-slate-100 dark:bg-slate-900/50 p-3 rounded-lg border border-slate-200/50 dark:border-slate-700/50">
+                <strong>System Architecture:</strong> {project.architecture}
+              </div>
+
+              {/* Skill Tags */}
+              <div className="mt-auto pt-4">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.skills.map((skill, sIdx) => (
+                    <span
+                      key={sIdx}
+                      className="px-2.5 py-1 text-xs font-semibold rounded-md bg-indigo-50 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300 border border-indigo-100 dark:border-indigo-900"
+                    >
+                      {skill}
+                    </span>
                   ))}
-                </ul>
-              </div>
+                </div>
 
-              {/* Tech Stack */}
-              <div className="flex flex-wrap gap-3">
-                {project.tech.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 text-sm bg-slate-700 rounded-full text-slate-300"
-                  >
-                    {tech}
-                  </span>
-                ))}
+                {/* Links */}
+                {(project.githubUrl || project.liveUrl) && (
+                  <div className="flex gap-4 text-sm font-medium pt-2 border-t border-slate-100 dark:border-slate-700">
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400"
+                      >
+                        GitHub Code →
+                      </a>
+                    )}
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-indigo-600 dark:text-indigo-400 hover:underline"
+                      >
+                        Live Demo →
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
-
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
-}
-
-```
+};

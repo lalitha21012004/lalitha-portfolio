@@ -27,7 +27,7 @@ const skillsCategory = [
   }
 ];
 
-export const Skills: React.FC = () => {
+const Skills: React.FC = () => {
   return (
     <section className="py-10 bg-white dark:bg-slate-850" id="skills">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,4 +57,4 @@ export const Skills: React.FC = () => {
     </section>
   );
 };
-
+export default Skills;

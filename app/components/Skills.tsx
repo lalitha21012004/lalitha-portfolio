@@ -57,4 +57,4 @@ export const Skills: React.FC = () => {
     </section>
   );
 };
-```[cite: 1]
+

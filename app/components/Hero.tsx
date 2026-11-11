@@ -57,7 +57,7 @@ export default function Hero() {
               2. Change the `src="/profile.jpg"` path below to match your image file name.
             */}
             <Image
-              src="public/profile.jpg" 
+              src="/profile.jpg" 
               alt="G Lalitha Lochana"
               fill
               priority

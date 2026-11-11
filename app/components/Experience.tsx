@@ -35,13 +35,13 @@ export default function Experience() {
           {/* Work Description */}
           <ul className="space-y-3 text-slate-300 leading-relaxed">
             <li>
-              • Architected and developed scalable backend components and custom pipeline adapters for Azure, Jenkins, and GitLab CI/CD workflows[cite: 1].
+              • Architected and developed scalable backend components and custom pipeline adapters for Azure, Jenkins, and GitLab CI/CD workflows.
             </li>
             <li>
-              • Validated complex system workflows and ensured seamless backend communication and integration across distributed services[cite: 1].
+              • Validated complex system workflows and ensured seamless backend communication and integration across distributed services.
             </li>
             <li>
-              • Verified database-driven configurations and collaborated to systematically troubleshoot and fix deployment and integration errors[cite: 1].
+              • Verified database-driven configurations and collaborated to systematically troubleshoot and fix deployment and integration errors.
             </li>
           </ul>
 
